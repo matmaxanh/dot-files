@@ -1,0 +1,9 @@
+[push]
+	default = current
+[user]
+	name = Pham Van Hieu
+	email = hieupv@nal.vn
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

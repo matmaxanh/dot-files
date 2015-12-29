@@ -1,0 +1,147 @@
+### CakePHP ###
+# CakePHP 3
+/vendor/*
+/config/app.php
+/tmp/*
+/logs/*
+
+# CakePHP 2
+/app/tmp/*
+/app/Config/core.php
+/app/Config/database.php
+/vendors/*
+
+### Node ###
+logs
+*.log
+npm-debug.log*
+.grunt
+node_modules
+.npm
+
+
+### Rails ###
+*.rbc
+capybara-*.html
+.rspec
+/log
+/tmp
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/public/system
+/coverage/
+/spec/tmp
+**.orig
+rerun.txt
+pickle-email-*.html
+
+## Environment normalization:
+/.bundle
+/vendor/bundle
+
+# if using bower-rails ignore default bower_components path bower.json files
+/vendor/assets/bower_components
+*.bowerrc
+bower.json
+
+### Sass ###
+.sass-cache/
+*.css.map
+
+### Eclipse ###
+.settings/
+.project
+
+### Linux ###
+*~
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+.nb-gradle/
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### SublimeText ###
+# cache files for sublime text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+sftp-config.json
+
+### Tags ###
+# Ignore tags created by ctags and cscope
+tags
+.tags
+!tags/
+cscope.files
+cscope.out
+cscope.in.out
+cscope.po.out
+
+### Vagrant ###
+.vagrant/
+
+### Vim ###
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+### Windows ###
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+### Sonar ###
+/.sonar/
+.sonar-properties
+
+### Yii ###
+assets/*
+!assets/.gitignore
+protected/runtime/*
+!protected/runtime/.gitignore
+protected/data/*.db
+themes/classic/views/
