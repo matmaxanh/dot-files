@@ -1,0 +1,68 @@
+call plug#begin('~/.vim/plugged')
+Plug 'raimondi/delimitmate'                 " automatic closing of quotes, brackets, parentheses
+Plug 'tpope/vim-commentary'                 " write comment
+Plug 'ctrlpvim/ctrlp.vim'                   " fuzzy file, buffer, mru, tag, etc finder
+Plug 'tacahiroy/ctrlp-funky'                " find fuzzy function name
+Plug 'joonty/vim-phpqa'                     " php quality checking tool
+Plug 'mikehaertl/pdv-standalone'            " generate phpdoc
+Plug 'ludovicchabant/vim-gutentags'         " generate tags
+call plug#end()
+set lazyredraw
+set backspace=indent,eol,start
+set splitbelow splitright
+set noswapfile
+set secure exrc
+set fileencodings=utf-8,cp932,euc-jp
+set autoread
+set hidden
+set nostartofline
+syntax enable
+set t_co=256
+set background=dark
+colorscheme solarized
+set number ruler cursorline
+filetype plugin indent on
+set expandtab smarttab
+set tabstop=4 shiftwidth=4 softtabstop=4
+set autoindent smartindent
+set hlsearch incsearch
+set wildmenu wildmode=longest,list
+set laststatus=2
+set statusline=%<%f%m%r%h%=%y\ [%{&fenc}]\ [%{&ff}]\ \|\ %l:%c\ \|\ %-4p
+autocmd BufWritePre * :%s/\s\+$//e
+let mapleader = ","
+nnoremap <leader>w :w<CR>
+nnoremap <leader>h :lcd %:p:h<CR>
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <space> :nohlsearch<CR>
+nnoremap <leader>p :set paste<CR>o<esc>"*]p:set nopaste<CR>
+nnoremap Y y$
+nnoremap <leader>v `[v`]
+nnoremap <leader>d "_dd
+vnoremap <leader>d "_d
+nnoremap <leader>= mzgg=g`zz
+nnoremap <leader>l :ls<CR>:b
+let delimitmate_expand_cr = 2
+let delimitmate_matchpairs = "(:),[:],{:}"
+nmap <leader>c <Plug>CommentaryLine
+vmap <leader>c <Plug>Commentary
+autocmd filetype php setlocal commentstring=//\ %s
+if executable('ag')
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    let g:ctrlp_use_caching = 0
+endif
+nnoremap <leader>r :CtrlPFunky<CR>
+nnoremap <leader>* :call PhpDocSingle()<CR>
+let g:phpqa_messdetector_autorun = 0
+let g:phpqa_codesniffer_autorun = 0
+let g:phpqa_codesniffer_args = "--standard=PSR2"
+nmap <leader>t :CtrlPTag<CR><C-\>w
+let g:gutentags_exclude = ['*.css', '*.html']
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
+autocmd BufNewFile,BufRead *.json set filetype=javascript
+autocmd BufNewFile,BufRead {*.scss,*.sass} set filetype=css
+autocmd BufNewFile,BufRead {*.ctp,*.tpl} set filetype=php
