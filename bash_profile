@@ -18,8 +18,8 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-if [ -f ~/.git-completion.bash ]; then
-    source ~/.git-completion.bash
+if [ -f ~/.git_completion.bash ]; then
+    source ~/.git_completion.bash
     __git_complete gco _git_checkout
     __git_complete grb _git_rebase
 fi
