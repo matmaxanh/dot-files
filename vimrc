@@ -2,7 +2,6 @@
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'joonty/vim-phpqa'
 call plug#end()
 
 " }}}
@@ -40,11 +39,4 @@ set wildmode=longest,list
 set exrc
 
 " strip trailing whitespaces
-autocmd BufWritePre,FileWritePre * :%s/\s\+$//e | %s/\r$//e
-
-" }}}
-" {{{ Plugin setting
-
-" vim-phpqa
-let g:phpqa_messdetector_autorun = 0
-let g:phpqa_codesniffer_autorun = 0
+autocmd BufWritePre * :%s/\s\+$//e
