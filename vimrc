@@ -26,15 +26,6 @@ set shiftwidth=4
 " keep indent when create new line
 set autoindent
 
-" insert indent when insert the content of function
-set smartindent
-
-" }}}
-" {{{ searching and indexing
-
-" enable enhanced command-line completion
-set wildmode=longest,list
-
 " load vimrc in each directory
 set exrc
 
