@@ -4,8 +4,6 @@ HISTSIZE=999999999
 HISTFILESIZE=999999999
 
 # Setting locale
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
 export CLICOLOR=1
 
 # Git
@@ -21,6 +19,7 @@ fi
 if [ -f ~/.git_completion.bash ]; then
     source ~/.git_completion.bash
     __git_complete gco _git_checkout
+    __git_complete gb _git_branch
     __git_complete grb _git_rebase
 fi
 

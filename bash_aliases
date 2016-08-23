@@ -1,7 +1,6 @@
 # SYSTEM
 alias ll='ls -alF'
 alias la='ls -A'
-alias l='ls -CF'
 
 # EDITOR
 alias v=vim
@@ -23,6 +22,7 @@ alias gf='git fetch'
 alias gl='git log'
 alias glo='git log --oneline'
 alias glp="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gmt='git mergetool'
 alias gpl='git pull'
 alias gps='git push'
 alias grb='git rebase'

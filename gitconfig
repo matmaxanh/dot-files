@@ -1,9 +1,15 @@
-[push]
-	default = current
+[http]
+    sslVerify = false
 [user]
-	name = Pham Van Hieu
-	email = hieupv@nal.vn
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+    name = hieupv
+    email = phamhieu275@gmail.com
+[core]
+    trustctime = false
+    excludesfile = /Users/bluecode/.gitignore
+    editor = /usr/local/bin/vim
+[push]
+    default = current
+[commit]
+    template = ~/.git_commit_msg
+[merge]
+    tool = vimdiff
