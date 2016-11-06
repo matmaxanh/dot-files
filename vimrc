@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
+filetype plugin indent on
 syntax on
 set background=dark
 colorscheme solarized
