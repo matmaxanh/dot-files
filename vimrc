@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 filetype plugin indent on
+set autoread
 syntax on
 set background=dark
 colorscheme solarized
